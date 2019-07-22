@@ -10,8 +10,20 @@
 
 {% block content %}
 	{% for post in posts %}
-		<p style = 'font-family:微軟正黑體:font-size:16pt;font-weight:bold;'>
-			<a href='/post/{{post.slug}}'>{{post.title}}</a>
-		</p>
+		<div class = 'card bg-dark mb-4'>
+			<div class = 'card-header text-white'>
+				<p style = 'font-family:微軟正黑體:font-size:16pt;font-weight:bold;'>
+					<a href='/post/{{post.slug}}'>{{post.title}}</a>
+				</p>
+			</div>
+			<div class = 'card-body bg-light'>
+				<p>{{post.body | truncatechars:40}}</p>
+			</div>
+			<div class = 'card-header text-white'>
+				<p>
+					發布時間:{{post.pub_date | date:"Y/m/d, h:m:s"}}
+				</p>
+			</div>
+		</div>
 	{% endfor %}
 {% endblock %}

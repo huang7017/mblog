@@ -25,7 +25,7 @@ SECRET_KEY = '!(zry^e8!d=y6cke-c1x*s^swhtthl^mg8-rr^#3a-ddo2yjm@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.19.128']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainsite'
+    'markdown_deux',
+    'mainsite',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR,'static')

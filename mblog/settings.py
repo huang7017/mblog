@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '../mblog/static'),
+    os.path.join(BASE_DIR, '../mainsite/static'),
 )
 
 db_from_env = dj_database_url.config()
